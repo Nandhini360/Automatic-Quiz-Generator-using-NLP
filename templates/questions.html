@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Your Questions</title>
+    <script>
+        function revealAnswer(id) {
+            document.getElementById("answer-" + id).style.display = "block";
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <h1>Generated Questions</h1>
+    <ul>
+        {% for q in questions %}
+        <li>
+            {{ loop.index }}. {{ q.question }}
+            <button onclick="revealAnswer('{{ loop.index0 }}')">Show Answer</button>
+            <p id="answer-{{ loop.index0 }}" style="display:none;">
+                Answer: {{ q.answer }}
+            </p>
+
+
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

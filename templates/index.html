@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Automated Question Generator</title>
+</head>
+<body>
+  <h1>Upload PDF & Generate Questions</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <label>PDF File:</label>
+    <input type="file" name="pdf_file" required><br><br>
+
+    <label>Pages (e.g., 1,2,3 or leave empty for all):</label>
+    <input type="text" name="pages"><br><br>
+
+    <label>Number of Questions:</label>
+    <input type="number" name="num_questions" value="5"><br><br>
+
+    <button type="submit">Generate Questions</button>
+  </form>
+</body>
+</html>
